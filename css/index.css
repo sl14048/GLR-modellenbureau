@@ -5,6 +5,13 @@ html {
 body {
     height: 100%;
     margin: 0;
+    font-family: 'sequelBlack', sans-serif;
+
+}
+
+@font-face {
+  font-family: sequelBlack;
+  src: url('../fonts/sequel-100-black-105.ttf');
 }
 
 .bar {
@@ -44,7 +51,6 @@ body {
 .herotitle h1 {
     align-self: flex-start;
     margin-left: 10%;
-    font-family: "M PLUS 1", sans-serif;
     font-size: 60px;
     color: #EAA500;
 }
