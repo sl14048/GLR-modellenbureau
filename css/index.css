@@ -1,0 +1,99 @@
+html {
+  scroll-behavior: smooth;
+
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.bar {
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.herotitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.herotitle h1 {
+    align-self: flex-start;
+    margin-left: 10%;
+    font-family: "M PLUS 1", sans-serif;
+    font-size: 60px;
+    color: #EAA500;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s;
+}
+button:hover {
+    transform: translateY(5px);
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+padding-top: 100px;    
+  padding-bottom: 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  flex: 0 1 23%; 
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card .container {
+  padding: 10px;
+  text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
