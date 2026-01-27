@@ -6,12 +6,15 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'sequelBlack', sans-serif;
+    background-color: #EAA500;
 
 }
 
 @font-face {
   font-family: sequelBlack;
   src: url('../fonts/Sequel100Black-95.ttf');
+  font-weight: lighter;
+
 }
 
 .bar {
@@ -23,16 +26,9 @@ body {
     width: 100%;
     height: 90vh;
     overflow: hidden;
+        background-color: #EAA500;
 }
 
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-}
 
 .herotitle {
     position: absolute;
@@ -52,13 +48,14 @@ body {
     align-self: flex-start;
     margin-left: 10%;
     font-size: 60px;
-    color: #EAA500;
+    color: white;
+    letter-spacing: 2px;
 }
 
 button {
     height: 40px;
     width: 40px;
-    background-color: #bbb;
+    background-color: #ffffff;
     border-radius: 50%;
     display: inline-block;
     align-content: center;
@@ -66,6 +63,7 @@ button {
     border: none;
     transition: transform 0.3s;
 }
+
 button:hover {
     transform: translateY(5px);
 }
@@ -93,6 +91,7 @@ padding-top: 100px;
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
+  position: relative;
 }
 
 .card .container {
