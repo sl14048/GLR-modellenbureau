@@ -13,8 +13,16 @@ body {
 @font-face {
   font-family: sequelBlack;
   src: url('../fonts/Sequel100Black-95.ttf');
-  font-weight: lighter;
 }
+@font-face {
+    font-family: nimbus;
+    src: url('../fonts/nimbussandbla.ttf');
+}
+
+a {
+    text-decoration: none;
+}
+
 .bar {
     height: 50px;
     background-color: rgb(0, 0, 0);
@@ -25,9 +33,10 @@ body {
   height: 90vh;
   overflow: hidden;
   background-color: #EAA500;
-  padding: 50px; 
+  padding: 50px;
   box-sizing: border-box;
 }
+
 
 .herotitle {
   position: absolute;
@@ -71,26 +80,26 @@ button:hover {
 
 .card-wrapper {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
-padding-top: 100px;    
+  gap: 50px;
+  padding: 80px;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  flex: 0 1 23%; 
-  background-color: white;
-  margin-bottom: 20px;
-}
+/*.card {*/
+/*  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+/*  transition: 0.3s;*/
+/*  border-radius: 5px;*/
+/*  flex: 0 1 23%;*/
+/*  background-color: white;*/
+/*  margin-bottom: 20px;*/
+/*}*/
 
 .card img {
-  width: 100%;
-  height: auto;
+  width: 500px;
+    height: 500px;
   border-radius: 5px 5px 0 0;
   position: relative;
 }
@@ -99,6 +108,20 @@ padding-top: 100px;
   padding: 10px;
   text-align: center;
 }
+
+/*kaart*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #EAA500;
+    border-radius: 15px;
+    font-family: 'nimbus', sans-serif;
+    font-size: 30px;
+
 a {
     text-decoration: none;
     color: rgb(48, 8, 8);
