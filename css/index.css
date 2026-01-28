@@ -14,7 +14,6 @@ body {
   font-family: sequelBlack;
   src: url('../fonts/Sequel100Black-95.ttf');
   font-weight: lighter;
-
 }
 .bar {
     height: 50px;
@@ -45,7 +44,6 @@ body {
   font-weight: 900;
   color: white;
   letter-spacing: 2px;
-  color: white;
   margin: 0;
 }
 .herotitle h2 {

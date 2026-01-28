@@ -1,0 +1,73 @@
+body {
+    background-image: url("../../media/camera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@font-face {
+  font-family: sequelBlack;
+  src: url('../../fonts/Sequel100Black-95.ttf');
+  font-weight: lighter;
+}
+h1 {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'sequelBlack', sans-serif;
+    letter-spacing: 5px;
+}
+h2 {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 200px;
+    margin-top: -10px;
+    font-family: 'sequelBlack', sans-serif;
+    letter-spacing: 5px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.box {
+  background-color: #A2FF00;
+  width: 400px;
+  height: 225px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-family: 'sequelBlack', sans-serif;
+}
+
+.box-text {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 900;
+  transform: scaleY(1.3);
+    font-family: 'sequelBlack', sans-serif;
+
+}
+.bottom-text {
+  color: #A2FF00;
+  font-size: 26px;
+  letter-spacing: 1px;
+  transform: scaleY(0.8);
+  font-family: 'sequelBlack', sans-serif;
+  position: fixed;
+    bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.bottom-text a {
+    text-decoration: none;
+    color: rgb(162, 255, 0);
+}
