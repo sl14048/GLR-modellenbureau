@@ -1,111 +1,135 @@
-body{
+body {
     margin: 0;
+    background-color: #f0e6e6;
 }
+
 .profile-section {
-  background-color: #f3b415;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    background-color: #EAA500;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
-.top-bar {
-  width: 100%;
-  padding: 20px 40px;
-  font-weight: bold;
-  font-size: 24px;
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    z-index: 11;
+    font-family: 'Arial', sans-serif;
 }
 
-.carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  flex-grow: 1;
-}
-
-.nav-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #000;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-circle-group {
-  text-align: center;
-  font-weight: bold;
+.back-btn:hover {
+    background: #000;
+    transition: all 0.7s ease;
+    color: #fff;
 }
 
 .profile-card {
-  text-align: center;
-  width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(44, 43, 43, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .model-name {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+    margin-top: 0;
+    color: #2c2929;
 }
 
-.image-box {
-  background-color: #bbb;
-  height: 350px;
-  position: relative;
-  border: 1px solid #999;
+.slideshow-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #ddd;
 }
 
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.mySlides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
 }
 
-.arrow-overlay {
-  position: absolute;
-  top: 50%;
-  width: 110%;
-  left: -5%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+.dot-container { 
+    margin: 15px 0; 
 }
 
-.profile-info {
-  margin-top: 20px;
-  font-weight: bold;
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
 }
+
+.dot.active {
+    background-color: #333;
+}
+
 .collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    margin-top: 15px;
+    font-family: 'Arial', sans-serif;
 }
 
 .content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+    background-color: #bebaba;
+    border-radius: 0 0 8px 8px;
+    font-family: 'Arial', sans-serif;
+}
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.nav-arrow:hover {
+    background: #000;
+    color: #fff;
+}
+
+.nav-arrow.left { left: 5%; }
+.nav-arrow.right { right: 5%; }
+
+@media (max-width: 768px) {
+    .nav-arrow.left { left: 10px; width: 45px; height: 45px; }
+    .nav-arrow.right { right: 10px; width: 45px; height: 45px; }
 }

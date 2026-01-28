@@ -1,35 +1,42 @@
-const models = [
-  { name: "John Doe", img: "media/grey.jpg", desc: "Model" },
-  { name: "John Doe", img: "media/pink.png", desc: "Model" }
-];
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let currentIndex = 0;
-
-function updateCard() {
-  document.querySelector('.model-name').innerText = models[currentIndex].name;
-  document.getElementById('main-img').src = models[currentIndex].img;
-  document.querySelector('.profile-info h3').innerText = models[currentIndex].desc;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % models.length;
-  updateCard();
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + models.length) % models.length;
-  updateCard();
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].classList.add("active");
 }
-const coll = document.getElementsByClassName("collapsible");
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const coll = document.getElementsByClassName("collapsible");
+    
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+    }
+});
