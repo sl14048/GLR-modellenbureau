@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "http://localhost:63342/";
+$servername = "127.0.0.1";
 $username = "102460";
 $password = "Beroeps123";
 $dbname = "Beroeps_SDOK";
