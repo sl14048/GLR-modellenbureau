@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 $servername = "localhost";
 $username = "102460";
-$password = "";
+$password = "Beroeps123";
 $dbname = "Beroeps_SDOK";
 
 
