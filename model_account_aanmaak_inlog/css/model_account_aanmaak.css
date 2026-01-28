@@ -21,20 +21,29 @@ body{
 .inlog_container{
     margin: 0;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
     width: 25vw;
-    height: fit-content;
+    height: 30vw;
 }
 
 .inlog_form{
     width: 80%;
-    height: fit-content;
+    height: 80%;
     background-color: #8FE507;
     padding: 10%;
     border-radius: 20px;
+}
+
+.inlog_form_2{
+    width: 100%;
+    height: 100%;
+    background-color: #8FE507;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 80px;
 }
 
 .login{
@@ -48,12 +57,27 @@ label{
     text-align: center;
 }
 
+.input_container{
+    position: relative;
+    margin-top: 20%;
+}
+
 .input_tekst{
     width: 100%;
     border: 3px solid rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 1px;
-    margin-bottom: 7.5px;
+    margin-bottom: 10%;
+    padding: 3% 0% 3% 0%;
+}
+
+.input_tekst_2{
+    width: 100%;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 1px;
+    margin-bottom: 2%;
+    padding: 1% 0% 1% 0%;
 }
 
 .input_tekst:hover{
@@ -67,8 +91,9 @@ label{
     border-radius: 20px;
 
     width: 75%;
-    padding: 8% 0% 8% 0%;
+    padding: 7% 0% 7% 0%;
 
     display: block;
     margin: auto;
+    margin-top: 20%;
 }
