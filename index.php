@@ -2,14 +2,14 @@
 session_start();
 require 'config.php';
 
-
-if (isset($_SESSION["email"])) {
-    $query = "SELECT * FROM fotograaf
-            WHERE email = '{$_SESSION["email"]}'";
-
-    $result = $conn->query($query);
-
-    $user = $result->fetch(PDO::FETCH_ASSOC);
+//
+//if (isset($_SESSION["email"])) {
+//    $query = "SELECT * FROM fotograaf
+//            WHERE email = '{$_SESSION["email"]}'";
+//
+//    $result = $conn->query($query);
+//
+//    $user = $result->fetch(PDO::FETCH_ASSOC);
 
     try {
 
@@ -31,8 +31,8 @@ GROUP BY modellen.model_ID;";
         echo "<p> Foutmelding: ", $e->getMessage(), "</p>";
         exit;
     }
-} else {
-    header("Location: inlog_verwerk.php");
-}
+//} else {
+//    header("Location: inlog_verwerk.php");
+//}
 
 
