@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhonsona Persona <!--PHP--> - Info</title>
-    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="../css/info.css">
     <script src="js/info.js" defer></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
 
         <div class="profile-info">
             <button class="collapsible">Contact</button>
-            <div class="content"><p>Telefoon: +31 6 1234 5678</p></div>
+            <div class="content"><p>Telefoon: +31 6 1234 5678 e-mail: <?= $row['email'] ?></p></div>
         </div>
         <?php } ?>
     </div>

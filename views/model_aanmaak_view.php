@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inlog model</title>
-    <link rel="stylesheet" href="css/model_account_aanmaak.css">
+    <link rel="stylesheet" href="../css/model_account_aanmaak.css">
 
 </head>
 <body>
