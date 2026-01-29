@@ -9,7 +9,7 @@
 <body>
 <div class="card">
 <div class="login-box2">
-    <form action="" method="post">
+    <form action="model_inlog.php" method="get">
         <h2>login</h2>
         <div class="input_container">
             <input type="email" class="input_tekst" placeholder="e-mail*" name="email"><br>

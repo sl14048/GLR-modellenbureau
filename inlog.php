@@ -4,10 +4,9 @@ require("config.php");
 $email = $_POST['email'];
 $wachtwoord = $_POST['wachtwoord'];
 $resultaat = "";
-
 if (strlen($email)>0 && strlen($wachtwoord)>0) {
     $wachtwoord = sha1($wachtwoord);
-//    echo $gebruikersnaam .'-'. $wachtwoord;
+
 
     $query = "SELECT * from fotograaf WHERE email= :nm AND wachtwoord= :ww";
 
@@ -24,7 +23,7 @@ if (strlen($email)>0 && strlen($wachtwoord)>0) {
         exit();
     }else {
 
-        $resultaat = "Inlog incorrect";
+        $resultaat = "Inlog incorrect". $email .'-'. $wachtwoord;
         include 'inlog_verwerk.php';
 //        header('Location: inlog_verwerk.php?resultaat=inlogincorrect');
     }

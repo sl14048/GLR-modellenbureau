@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhonsona Persona <!--PHP--> - Info</title>
     <link rel="stylesheet" href="../css/info.css">
-    <script src="js/info.js" defer></script>
+    <script src="../js/info.js" defer></script>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
         <div class="slideshow-container">
                 <?php foreach ($fotos as $foto): ?>
-                    <div class="mySlides fade"><img src="media/<?=$foto?>"></div>
+                    <div class="mySlides fade"><img src="../media/<?=$foto?>"></div>
                 <?php endforeach; ?>
             </div>
 
@@ -35,7 +35,7 @@
 
         <div class="profile-info">
             <button class="collapsible">Contact</button>
-            <div class="content"><p>Telefoon: +31 6 1234 5678 e-mail: <?= $row['email'] ?></p></div>
+            <div class="content"><p><?= $row['contact'] ?> <br> e-mail: <?= $row['email'] ?></p></div>
         </div>
         <?php } ?>
     </div>

@@ -15,7 +15,7 @@
 
     <p class="login"></p>
 
-    <form action="../model/model_aanmaak.php" class="inlog_form_2">
+    <form action="../model_aanmaak.php" class="inlog_form_2">
 
         <div class="input_container_2">
 
