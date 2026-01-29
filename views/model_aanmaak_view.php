@@ -21,17 +21,17 @@
 
             <!-- naam -->
 
-            <input type="text" class="input_tekst_2" placeholder="naam*" required name="naam">
+            <input type="text" class="input_tekst_2" placeholder="*naam" required name="naam">
 
             <!-- wachtwoord -->
 
-            <input type="text" class="input_tekst_2" placeholder="wachtwoord*" required name="wachtwoord">
+            <input type="text" class="input_tekst_2" placeholder="*wachtwoord" required name="wachtwoord">
 
 
-            <input type="text" class="input_tekst_2" placeholder="e-mail*" required name="email">
+            <input type="text" class="input_tekst_2" placeholder="*e-mail" required name="email">
 
 
-            <input type="text" class="input_tekst_2" placeholder="contact mogelijkheid*" required name="contact">
+            <input type="text" class="input_tekst_2" placeholder="*contact mogelijkheid" required name="contact">
 
             <!-- profiel foto -->
             <label for="">profiel foto (max 3)</label> <br>
