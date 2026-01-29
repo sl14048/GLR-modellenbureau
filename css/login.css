@@ -26,6 +26,14 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
 }
+.login-box2 {
+    background-color: #8fe507;
+    width: 280px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
 
 h2 {
     margin-top: 0;
@@ -53,4 +61,7 @@ input {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+}
+.red{
+    color: red;
 }

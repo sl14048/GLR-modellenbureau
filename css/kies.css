@@ -1,12 +1,12 @@
 body {
-    background-image: url("../../media/camera.png");
+    background-image: url("../media/camera.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 @font-face {
   font-family: sequelBlack;
-  src: url('../../fonts/Sequel100Black-95.ttf');
+  src: url('../fonts/Sequel100Black-95.ttf');
   font-weight: lighter;
 }
 h1 {
