@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 session_start();
 require 'config.php';
 
+//whatdafukku
 
 if (isset($_SESSION["email"])) {
     $query = "SELECT * FROM fotograaf
