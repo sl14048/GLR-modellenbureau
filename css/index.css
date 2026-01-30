@@ -143,3 +143,19 @@ a {
 .doubleimg:nth-child(2){
  display: none;
 }
+.doubleimg:nth-child(3){
+    display: none;
+}
+
+.filter{
+    width: 200px;
+    border-radius: 0%;
+}
+.check{
+    width: 30px;
+    color: lightblue;
+    padding: 30px;
+}
+.admin{
+    color: red;
+}

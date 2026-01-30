@@ -16,6 +16,7 @@ if (isset($_SESSION["email"])) {
         $query = "SELECT 
 *,GROUP_CONCAT(modellen_fotos.fotonaam SEPARATOR ',') AS fotonaam
 FROM modellen LEFT JOIN modellen_fotos ON modellen_fotos.model_ID = modellen.model_ID
+WHERE modellen.status NOT IN ('in behandeling','afgekeurd') 
 GROUP BY modellen.model_ID;";
         $stmt = $conn->prepare($query);
         $stmt->execute();

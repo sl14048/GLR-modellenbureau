@@ -14,11 +14,16 @@
 <body>
 <div class="bar">
     <a href="model/model_inlog_verwerk.php" target="_blank">Inlog model</a> <br>
+    <a href="model/model_aanmaak_verwerk.php">meld aan model</a>
 </div>
 <?php if (isset($email)): ?>
     <a href="uitlog.php" class="log">Log out</a>
 <?php else: ?>
     <a href="student/login_verwerk.php" target="_blank">Inlog student</a>
+<?php endif; ?>
+
+<?php     if ($email["email"] == 'admin@admin.nl') : ?>
+    <br> <a href="admin.php" class="admin">admin pagina</a>
 <?php endif; ?>
 <div class="hero">
     <div class="herotitle">

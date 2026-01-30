@@ -10,7 +10,7 @@
 <body>
 
 <section class="profile-section">
-    <a href="index.php" class="back-btn">Terug</a>
+    <a href="../index.php" class="back-btn">Terug</a>
 
     <button class="nav-arrow left" onclick="plusSlides(-1)"><</button>
     <button class="nav-arrow right" onclick="plusSlides(1)">></button>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inlog model</title>
     <link rel="stylesheet" href="../css/model_account_aanmaak.css">
+    <link rel="stylesheet" href="../css/login.css">
 
 </head>
 <body>
@@ -15,25 +16,13 @@
 
     <p class="login"></p>
 
-    <form action="../model_aanmaak.php" class="inlog_form_2">
+    <form action="model_aanmaak.php" enctype="multipart/form-data" method="post">
 
-        <div class="input_container_2">
-
-            <!-- naam -->
-
-            <input type="text" class="input_tekst_2" placeholder="*naam" required name="naam">
-
-            <!-- wachtwoord -->
-
-            <input type="text" class="input_tekst_2" placeholder="*wachtwoord" required name="wachtwoord">
-
-
-            <input type="text" class="input_tekst_2" placeholder="*e-mail" required name="email">
-
-
-            <input type="text" class="input_tekst_2" placeholder="*contact mogelijkheid" required name="contact">
-
-            <!-- profiel foto -->
+        <div class="login-box2">
+            <input type="text" class="" placeholder="naam*" required name="naam">
+            <input type="password" class="" placeholder="wachtwoord*" required name="wachtwoord">
+            <input type="email" class="" placeholder="e-mail*" required name="email">
+            <input type="text" class="" placeholder="contact mogelijkheid*" required name="contact">
             <label for="">profiel foto (max 3)</label> <br>
             <input class="file_upload" type="file" multiple required name="fotonaam">
             <br>
