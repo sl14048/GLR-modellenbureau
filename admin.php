@@ -16,7 +16,6 @@ if (isset($_SESSION["email"])) {
     if ($email["email"] == 'admin@admin.nl') {
 
 
-        $where = "";
 
         if (isset($_POST['filter'])) {
             if ($_POST['filter'] == 'model') {

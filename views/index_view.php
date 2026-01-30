@@ -23,7 +23,7 @@
 <?php endif; ?>
 
 <?php     if ($email["email"] == 'admin@admin.nl') : ?>
-    <br> <a href="admin.php" class="admin">admin pagina</a>
+    <br> <a href="admin_verwerk.php" class="admin">admin pagina</a>
 <?php endif; ?>
 <div class="hero">
     <div class="herotitle">

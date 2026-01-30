@@ -13,7 +13,7 @@
     <link href="https://fonts.cdnfonts.com/css/sequel" rel="stylesheet">
 </head>
 <body>
-
+<a href="index.php">Terug</a>
 <form action="admin.php" method="post">
     <button type="submit" name="filter" value="model" class="filter">modellen</button>
     <button type="submit" name="filter" value="fotograaf" class="filter">fotograaf</button>
