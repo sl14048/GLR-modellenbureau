@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 session_start();
 require 'config.php';
 
-//whatdafukku
+
 
 if (isset($_SESSION["email"])) {
     $query = "SELECT * FROM fotograaf
@@ -17,9 +17,8 @@ if (isset($_SESSION["email"])) {
     if ($email["email"] == 'admin@admin.nl') {
 
 
-
-        if (isset($_POST['filter'])) {
-            if ($_POST['filter'] == 'model') {
+        if (isset($_GET['filter'])) {
+            if ($_GET['filter'] == 'model') {
                 try {
 
                     $query = "SELECT 
@@ -41,7 +40,7 @@ if (isset($_SESSION["email"])) {
                     echo "<p> Foutmelding: ", $e->getMessage(), "</p>";
                     exit;
                 }
-            }elseif ($_POST['filter'] == 'fotograaf') {
+            }elseif ($_GET['filter'] == 'fotograaf') {
                 try {
 
                     $query = "SELECT * FROM fotograaf WHERE status = ('in behandeling')";

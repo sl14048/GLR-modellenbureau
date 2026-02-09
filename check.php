@@ -3,6 +3,7 @@ session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 require 'config.php';
+
 $status = $_GET['status'];
 $filter = $_GET['filter'];
 $model_ID = $_GET['model_ID'];
@@ -30,7 +31,9 @@ if (isset($_SESSION["email"])) {
                     ]);
 
                     if ($stmt->rowCount() > 0) {
-                        echo "<p>Status aangepast</p>";
+//                        echo "<p>Status aangepast</p>";
+                        header("Location: admin.php?filter=model");
+//                        include 'admin.php';
                     } else {
                         echo "<p>Status was al hetzelfde of model niet gevonden</p>";
                     }

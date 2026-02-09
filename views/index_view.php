@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLR Modellenbureau</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/sequel" rel="stylesheet">
-    <script src="js/info.js" defer></script>
+
 </head>
 <body>
 <div class="bar">
@@ -22,12 +20,14 @@
     <a href="student/login_verwerk.php" target="_blank">Inlog student</a>
 <?php endif; ?>
 
-<?php     if ($email["email"] == 'admin@admin.nl') : ?>
-    <br> <a href="admin_verwerk.php" class="admin">admin pagina</a>
+<?php   if ($email["email"] == 'admin@admin.nl') : ?>
+    <br> <a href="admin.php?filter=model" class="admin">admin pagina</a>
+<?php else: ?>
 <?php endif; ?>
 <div class="hero">
     <div class="herotitle">
-        <h1>Fotografie <br> Modellenbureau</h1>
+        <h1>Fotografie</h1>
+        <h2>Modellenbureau</h2>
         <a href="#mensen"><button>🡻</button></a>
     </div>
 </div>

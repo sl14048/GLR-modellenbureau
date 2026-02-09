@@ -14,16 +14,16 @@
 </head>
 <body>
 <a href="index.php">Terug</a>
-<form action="admin.php" method="post">
+<form action="admin.php" method="get">
     <button type="submit" name="filter" value="model" class="filter">modellen</button>
     <button type="submit" name="filter" value="fotograaf" class="filter">fotograaf</button>
 
 </form>
 
 <?php
-if (isset($_POST['filter'])) {
+if (isset($_GET['filter'])) {
 //model filter
-if ($_POST['filter'] == 'model') {
+if ($_GET['filter'] == 'model') {
 if ($aantalRijen >0) { ?>
     <style> body {background: #8FE507FF;}.card{color: #8FE507}.filter:nth-child(1){background-color: black; color: white}</style>
     <div class="card-wrapper">
@@ -33,7 +33,7 @@ if ($aantalRijen >0) { ?>
                     <?php
                     $fotos = explode(',', $row['fotonaam']);
                     foreach ($fotos as $foto): ?>
-                        <img src="media/<?=$foto?>" alt="Avatar" class="doubleimg">
+                        <a href="student/info_model.php?model_ID=<?= $row['model_ID']?>"><img src="media/<?=$foto?>" alt="Avatar" class="doubleimg"></a>
                     <?php endforeach; ?>
                     <div class="container">
                         <h4><?= $row['naam']?></h4>
@@ -49,7 +49,7 @@ if ($aantalRijen >0) { ?>
 <?php }
 
 //fotograaf filter
-}elseif ($_POST['filter'] == 'fotograaf'){
+}elseif ($_GET['filter'] == 'fotograaf'){
     if ($aantalRijen >0) { ?>
         <style>.filter:nth-child(2){background-color: black; color: white}</style>
     <div class="card-wrapper">

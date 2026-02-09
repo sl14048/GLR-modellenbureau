@@ -24,7 +24,7 @@
             <input type="email" class="" placeholder="e-mail*" required name="email">
             <input type="text" class="" placeholder="contact mogelijkheid*" required name="contact">
             <label for="">profiel foto (max 3)</label> <br>
-            <input class="file_upload" type="file" multiple required name="fotonaam">
+            <input class="file_upload" type="file" multiple required name="fotonaam[]">
             <br>
             <input class="inlog_submit" type="submit">
 

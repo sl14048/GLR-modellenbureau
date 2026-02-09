@@ -117,44 +117,54 @@ $contact = $_POST["contact"];
 
 
 $target_dir = "../media/";
-$image = basename($_FILES["fotonaam"]["name"]);
-$target_file = $target_dir . $image;
-$uploadOk = 0;
-$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$uploads=[];
 
-if (!empty($_FILES["fotonaam"]["tmp_name"])) {
-    $check = getimagesize($_FILES["fotonaam"]["tmp_name"]);
-} else {
-    $check = false;
-}
+    foreach ($_FILES["fotonaam"]["name"] as $key => $name) {
+        $image = basename($_FILES["fotonaam"]["name"][$key]);
+        $target_file = $target_dir . $image;
+        $uploadOk = 0;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-if ($check !== false) {
-    $uploadOk = 1;
-} else {
-    $errors .= "File is not an image.<br>";
-    $uploadOk = 0;
-}
+        if (!empty($_FILES["fotonaam"]["tmp_name"][$key])) {
+            $check = getimagesize($_FILES["fotonaam"]["tmp_name"][$key]);
+        } else {
+            $check = false;
+        }
 
-if (file_exists($target_file)) {
-    $errors .= "Sorry, file already exists.<br>";
-    $uploadOk = 0;
-}
+        if ($check !== false) {
+            $uploadOk = 1;
+        } else {
+            $errors .= "File is not an image.<br>";
+            $uploadOk = 0;
+        }
 
-if ($_FILES["fotonaam"]["size"] > 500000) {
-    $errors .= "Sorry, your file is too large.<br>";
-    $uploadOk = 0;
-}
+        if (file_exists($target_file)) {
+            $errors .= "Sorry, file already exists.<br>";
+            $uploadOk = 0;
+        }
 
-if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif") {
-    $errors .= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
-    $uploadOk = 0;
-}
+        if ($_FILES["fotonaam"]["size"][$key] > 500000) {
+            $errors .= "Sorry, your file is too large.<br>";
+            $uploadOk = 0;
+        }
 
-if ($uploadOk == 0) {
-    $errors .= "Sorry, your file was not uploaded.<br>";
-}
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif") {
+            $errors .= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.<br>";
+            $uploadOk = 0;
+        }
 
+        if ($uploadOk == 0) {
+            $errors .= "Sorry, your file was not uploaded.<br>";
+        }
+        if ($uploadOk == 1) {
+
+            $uploads[] = [
+                'tmp' => $_FILES["fotonaam"]["tmp_name"][$key],
+                'name' => $image
+            ];
+        }
+    }
 if (empty($errors)) {
     try {
         $stmt = $conn->prepare("
@@ -171,12 +181,11 @@ if (empty($errors)) {
 
         $model_ID = $conn->lastInsertId();
 
-
-        if ($uploadOk == 1) {
+        foreach ($uploads as $FILES) {
             $newName = uniqid('img_', true) . '.' . $imageFileType;
             $target_file = $target_dir . $newName;
 
-            if (move_uploaded_file($_FILES["fotonaam"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($FILES["tmp"], $target_file)) {
 
                 $stmt2 = $conn->prepare("
                     INSERT INTO modellen_fotos (model_ID, fotonaam)
@@ -187,15 +196,15 @@ if (empty($errors)) {
                     ':model_ID' => $model_ID,
                     ':fotonaam' => $newName
                 ]);
-
+            }else {
+                echo "Sorry, there was an error uploading your file.";
+            }}
                 echo "File uploaded and data saved successfully!";
                 header("Location: model_inlog_verwerk.php");
                 exit;
 
-            } else {
-                echo "Sorry, there was an error uploading your file.";
-            }
-        }
+
+
 
     } catch (PDOException $e) {
         echo "FOUT met toevoegen:<br>";
@@ -203,6 +212,7 @@ if (empty($errors)) {
     }
 } else {
     echo $errors;
-}} else{
+}
+} else{
     echo "not posted";
 }
