@@ -22,11 +22,11 @@ if (strlen($email)>0 && strlen($wachtwoord)>0) {
 
     if ($stmt->rowCount()) {
         $_SESSION['email'] = $email;
-        header('Location: ../index.php');
+        header('Location: model_profiel.php');
         exit();
     }else {
 
-        $resultaat = "Inlog incorrect". $email .'-'. $wachtwoord;
+        $resultaat = "Inlog incorrect";
         include 'model_inlog_verwerk.php';
 //        header('Location: inlog_verwerk.php?resultaat=inlogincorrect');
     }

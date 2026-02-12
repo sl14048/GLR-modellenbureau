@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modellen Inlog</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
 <div class="login-box2">
     <form action="model_inlog.php" method="get">
         <h2>login</h2>
+        <p class="red"><?= $resultaat?></p>
         <div class="input_container">
             <input type="email" class="input_tekst" placeholder="e-mail*" name="email"><br>
             <input type="password" class="input_tekst" placeholder="wachtwoord*" name="wachtwoord">

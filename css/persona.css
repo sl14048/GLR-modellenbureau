@@ -1,0 +1,232 @@
+body{
+    background-color: greenyellow;
+}
+/* inhoud container */
+.inhoud_container{
+    position: absolute;
+    background-color: black;
+    left: 5vw;
+    top: 2.5vw;
+    width: 90%;
+    height: 90%;
+    border-radius: 65px;
+}
+/* model images */
+.fotos_container{
+    position: relative;
+    height: 100px;
+
+    left: 5%;
+    top: 10%;
+
+    width: 90%;
+    height: 50%;
+
+    /* grid */
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+
+    /* positie test */
+    /* background-color: rgba(0, 255, 255, 0.199); */
+}
+
+.model_foto_col{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: rgb(79, 244, 46);
+    padding: 5%;
+}
+
+/* model info */
+.info_container{
+position: relative;
+
+/* positie test */
+/* background-color: rgba(0, 255, 255, 0.151); */
+
+left: 10%;
+top:10%;
+
+width: fit-content;
+height: fit-content;
+
+text-align: center;
+}
+
+.info_label{
+    margin-bottom: -15px;
+    color: greenyellow;
+
+    font-size: x-large;
+}
+
+.info_data{
+    color: white;
+}
+
+.model_naam{
+    color: white;
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+
+.status_container{
+position: relative;
+
+left: 50%;
+top: 600px;
+
+width: fit-content;
+height: fit-content;
+
+text-align: center;
+
+/* positie test */
+/* background-color: rgba(0, 255, 255, 0.151); */
+}
+
+.aanvraag_knop{
+position: relative;
+padding: 10px;
+background-color: yellowgreen;
+border-radius: 30px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-size: x-large;
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+
+    /* inhoud container */
+.inhoud_container{
+    position: absolute;
+    background-color: black;
+    left: 5vw;
+    top: 2.5vw;
+    width: 90%;
+    height: 95%;
+    border-radius: 65px;
+}
+
+/* model images */
+
+.img3, .img2{
+display: none;
+
+}
+.fotos_container{
+    position: relative;
+    height: 100px;
+
+    left: 5%;
+    top: 5%;
+
+    width: 90%;
+    height: 50%;
+
+    /* grid */
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+
+    /* positie test */
+    /* background-color: rgba(0, 255, 255, 0.199); */
+}
+
+/* model info */
+.info_container{
+position: relative;
+
+/* positie test */
+/* background-color: rgba(0, 255, 255, 0.151); */
+
+margin-top: -15%;
+
+width: 85%;
+height: fit-content;
+
+text-align: center;
+}
+
+
+.info_label{
+    margin-bottom: -15px;
+    color: greenyellow;
+
+    font-size: medium;
+}
+
+.info_data{
+    color: white;
+}
+
+.model_naam{
+    color: white;
+    font-size: 30px;
+    margin-bottom: -20px;
+}
+
+/* status  */
+
+.status_container{
+position: relative;
+
+left: 20%;
+top: 12.5%;
+
+width: fit-content;
+height: fit-content;
+
+text-align: center;
+
+/* positie test */
+/* background-color: rgba(0, 255, 255, 0.151); */
+}
+
+/* status  */
+
+.aanvraag_knop{
+position: relative;
+padding: 10px;
+background-color: yellowgreen;
+border-radius: 30px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-size: x-large;
+}
+
+}
+.but{
+    position: relative;
+    height: 40px;
+    width: 100px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: inline-block;
+    align-content: center;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s;
+    left: calc(50% - 60px);
+    top: 3px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.but:hover {
+    transform: translateY(5px);
+    background: black;
+    a{
+        color: white;
+    }
+}

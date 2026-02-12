@@ -23,7 +23,7 @@ if (strlen($email)>0 && strlen($wachtwoord)>0) {
         exit();
     }else {
 
-        $resultaat = "Inlog incorrect". $email .'-'. $wachtwoord;
+        $resultaat = "Inlog incorrect";
         include 'inlog_verwerk.php';
 //        header('Location: inlog_verwerk.php?resultaat=inlogincorrect');
     }
