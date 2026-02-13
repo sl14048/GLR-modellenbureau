@@ -71,6 +71,24 @@ a {
 /*  margin: 0;*/
 /*  text-transform: uppercase;*/
 /*}*/
+
+#loguit{
+    width: 50px;
+    padding: 20px;
+}
+.admin{
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    left: 45px;
+}
+#quitclaim{
+    position: relative;
+    padding: 20px;
+    left: 20px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+}
 button {
   position: relative;
   height: 40px;

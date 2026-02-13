@@ -36,6 +36,7 @@ if (isset($_SESSION["email"])) {
 //                        include 'admin.php';
                     } else {
                         echo "<p>Status was al hetzelfde of model niet gevonden</p>";
+                        include "Location: admin.php?filter=model";
                     }
 
                 } catch (PDOException $e) {

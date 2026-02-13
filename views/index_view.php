@@ -11,24 +11,26 @@
 </head>
 <body>
 <?php if (isset($email)): ?>
-    <a href="uitlog.php" class="log">Log out</a>
+    <a href="uitlog.php" class="log"><img src="media/logout.png" alt="loguit icoon" id="loguit"></a>
 <?php else: ?>
     <a href="student/login_verwerk.php" target="_blank">Inlog student</a>
 <?php endif; ?>
 
 <?php   if ($email["email"] == 'admin@admin.nl') : ?>
-    <br> <a href="admin.php?filter=model" class="admin">admin pagina</a>
+    <br> <a href="admin.php?filter=model" class="admin"><img src="media/admin.png" alt="admin icon" class="admin"></a>
 <?php else: ?>
 <?php endif; ?>
+
 <div class="hero">
     <div class="herotitle">
         <h1>Fotografie</h1>
         <h2>Modellenbureau</h2>
         <a href="#mensen"><button>🡻</button></a>
+
     </div>
 </div>
 <section id="mensen">
-
+    <a href="download/Quitclaim_voorbeeld.pdf" download id="quitclaim"> Download je quickclaim </a>
     <?php
     if ($aantalRijen >0) { ?>
         <div class="card-wrapper">
